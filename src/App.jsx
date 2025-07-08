@@ -42,6 +42,7 @@ import UseToggle from './UseToggle.jsx';
 import UseReducerHook from './useReducerHook.jsx';
 import UseAPI from './UseAPI.jsx';
 import ColorMixer from './ColorMixer.jsx';
+import UseOptimisticHook from './UseOptimisticHook.jsx';
 
 const LazyLoading = lazy(() => import('./LazyLoading.jsx'));
 
@@ -94,6 +95,7 @@ function App() {
 
   return (
     <>
+      <UseOptimisticHook />
       <ColorMixer />
       <h1>use API in React.js</h1>
       <Suspense fallback={<h1>Loading...</h1>}>
