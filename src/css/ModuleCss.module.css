@@ -1,0 +1,28 @@
+.textColor { 
+    color: orange;
+}
+
+.cardStyle {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    width: 200px;
+    text-align: center;
+}
+
+.heading1 {
+    color: blue;
+    font-size: 24px;
+}
+
+.divStyle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.imgStyle {
+    width: 100px;
+    margin: 10px;
+    border-radius: 50%;
+}
