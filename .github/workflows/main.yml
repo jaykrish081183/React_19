@@ -9,29 +9,29 @@ on:
     branches: 
       - main
       - dev
-      
+
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     
     steps:
-      - name: checkout repo
+      - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Setup Node
         uses: actions/setup-node@v1
         with: 
-          Node-version: 16
+          node-version: 16
      
       - name: Install dependencies
-        run: bahmutov/npm-install@v1
+        uses: bahmutov/npm-install@v1
 
       - name: Build project
         run: npm run build
          
       - name: Upload production-ready build files 
-        uses: actions/upload-artifect@v2
+        uses: actions/upload-artifact@v2
         with: 
           name: production-files 
           path: ./build
@@ -40,10 +40,10 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == ’refs/heads/develop’
+    if: github.ref == 'refs/heads/develop'
     steps:
-      - name: Download artifect
-        uses: action/download-artifact@v2
+      - name: Download artifact
+        uses: actions/download-artifact@v2
         with: 
           name: production-files
           path: ./build
