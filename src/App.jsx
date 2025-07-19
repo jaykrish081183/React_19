@@ -136,7 +136,7 @@ function App() {
       <Skills />
       <Controlled />
       <InputVal />
-      <Wrapper color="orange">
+      <Wrapper color="red" >
         <div>
           <h1 >React Blog</h1>
           <img src={reactLogo} className="logo react" alt="React logo" />
